@@ -13,20 +13,16 @@ from selenium.webdriver.chrome.options import Options
 
 from PIL import Image
 
-
+# global vars
+grocery_url = "https://www.tesco.com/groceries/en-GB/slots/delivery"
 email = config("EMAIL")
 pwd = config("PASSWORD")
 CHROME_PATH = pathlib.Path.cwd()/"chromedriver"
-BASE_PATH = pathlib.Path.cwd()
-IMG_PATH = BASE_PATH/"screenshots"
-
+IMG_PATH = pathlib.Path.cwd()/"screenshots"
 GROCERY_SCREENSHOTS_DIR = IMG_PATH/"tesco"
+
 if not GROCERY_SCREENSHOTS_DIR.exists():
     GROCERY_SCREENSHOTS_DIR.mkdir(exist_ok=True)
-
-
-# global vars
-grocery_url = "https://www.tesco.com/groceries/en-GB/slots/delivery"
 
 
 class Scrape:
