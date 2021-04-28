@@ -25,7 +25,7 @@ if not GROCERY_SCREENSHOTS_DIR.exists():
     GROCERY_SCREENSHOTS_DIR.mkdir(exist_ok=True)
 
 
-class Scrape:
+class Scraper:
     def __init__(self, grocery_url):
         print("Preparing the Tesco Delivery Bot==========")
         options = Options()
@@ -132,6 +132,6 @@ class Scrape:
 
 
 if __name__ == "__main__":
-    browser = Scrape(grocery_url)
+    browser = Scraper(grocery_url)
     browser.login()
     browser.check_slots()
